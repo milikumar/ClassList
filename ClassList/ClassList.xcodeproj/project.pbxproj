@@ -24,6 +24,7 @@
 		256B697830747E4C0010A3D0 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256B697730747E4C0010A3D0 /* SwiftUI.framework */; };
 		256B698930747E4D0010A3D0 /* ClassListWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 256B697330747E4C0010A3D0 /* ClassListWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		256B6990307482140010A3D0 /* StudyTimerAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256B695530747CE20010A3D0 /* StudyTimerAttributes.swift */; };
+		25B34F8230904B1100BB171A /* ScheduleImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B34F8130904B1100BB171A /* ScheduleImportView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		256B697330747E4C0010A3D0 /* ClassListWidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ClassListWidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		256B697530747E4C0010A3D0 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		256B697730747E4C0010A3D0 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		25B34F8130904B1100BB171A /* ScheduleImportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleImportView.swift; sourceTree = "<group>"; };
 		25BAA7DF306B51FA005B21B0 /* ClassList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -131,6 +133,7 @@
 				256B695230747CE20010A3D0 /* PastListsAndSettingsViews.swift */,
 				256B695330747CE20010A3D0 /* ScheduleView.swift */,
 				256B695430747CE20010A3D0 /* SetupAndHomeViews.swift */,
+				25B34F8130904B1100BB171A /* ScheduleImportView.swift */,
 				256B695530747CE20010A3D0 /* StudyTimerAttributes.swift */,
 				256B695630747CE20010A3D0 /* Theme.swift */,
 				256B695730747CE20010A3D0 /* TimerFeature.swift */,
@@ -303,6 +306,7 @@
 				256B696830747CE20010A3D0 /* TrackFlowView.swift in Sources */,
 				256B696930747CE20010A3D0 /* Notifications.swift in Sources */,
 				256B696A30747CE20010A3D0 /* ScheduleView.swift in Sources */,
+				25B34F8230904B1100BB171A /* ScheduleImportView.swift in Sources */,
 				256B696B30747CE20010A3D0 /* StudyTimerAttributes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -128,6 +128,13 @@ nonisolated struct ScheduleSlot: Identifiable, Codable, Hashable {
     var endMinutes: Int
 }
 
+/// A named schedule you can switch to, like "Normal week" or "Short week".
+nonisolated struct SavedSchedule: Identifiable, Codable, Hashable {
+    var id = UUID()
+    var name: String
+    var slots: [ScheduleSlot]
+}
+
 /// One finished study session for a class on a day.
 nonisolated struct StudyLog: Identifiable, Codable, Hashable {
     var id = UUID()
@@ -151,8 +158,20 @@ final class DataStore: ObservableObject {
         didSet { save(lists, key: Keys.lists) }
     }
 
+    /// The schedule that's in use right now (a working copy of the active saved schedule).
     @Published var schedule: [ScheduleSlot] {
-        didSet { save(schedule, key: Keys.schedule) }
+        didSet {
+            save(schedule, key: Keys.schedule)
+            syncActiveSchedule()
+        }
+    }
+
+    @Published var savedSchedules: [SavedSchedule] {
+        didSet { save(savedSchedules, key: Keys.savedSchedules) }
+    }
+
+    @Published var activeScheduleID: UUID? {
+        didSet { UserDefaults.standard.set(activeScheduleID?.uuidString, forKey: Keys.activeSchedule) }
     }
 
     @Published var studyLogs: [StudyLog] {
@@ -163,13 +182,33 @@ final class DataStore: ObservableObject {
         static let classes = "classlist.classes"
         static let lists = "classlist.lists"
         static let schedule = "classlist.schedule"
+        static let savedSchedules = "classlist.savedSchedules"
+        static let activeSchedule = "classlist.activeSchedule"
         static let studyLogs = "classlist.studyLogs"
     }
 
     init() {
         classes = DataStore.load([SchoolClass].self, key: Keys.classes) ?? []
         lists = DataStore.load([DayList].self, key: Keys.lists) ?? []
-        schedule = DataStore.load([ScheduleSlot].self, key: Keys.schedule) ?? []
+        let loadedSlots = DataStore.load([ScheduleSlot].self, key: Keys.schedule) ?? []
+        var sets = DataStore.load([SavedSchedule].self, key: Keys.savedSchedules) ?? []
+        var activeID = UserDefaults.standard
+            .string(forKey: Keys.activeSchedule)
+            .flatMap { UUID(uuidString: $0) }
+
+        if sets.isEmpty {
+            // First time with named schedules: keep the schedule you already entered.
+            let first = SavedSchedule(name: "My schedule", slots: loadedSlots)
+            sets = [first]
+            activeID = first.id
+        }
+        if activeID == nil || !sets.contains(where: { $0.id == activeID }) {
+            activeID = sets[0].id
+        }
+
+        savedSchedules = sets
+        activeScheduleID = activeID
+        schedule = sets.first(where: { $0.id == activeID })?.slots ?? loadedSlots
         studyLogs = DataStore.load([StudyLog].self, key: Keys.studyLogs) ?? []
     }
 
@@ -216,6 +255,83 @@ final class DataStore: ObservableObject {
     }
 
     // MARK: Schedule
+
+    var activeScheduleName: String {
+        savedSchedules.first(where: { $0.id == activeScheduleID })?.name ?? "My schedule"
+    }
+
+    /// Keeps the saved copy of the active schedule matching what you're editing.
+    private func syncActiveSchedule() {
+        guard let id = activeScheduleID,
+              let index = savedSchedules.firstIndex(where: { $0.id == id }) else { return }
+        if savedSchedules[index].slots != schedule {
+            savedSchedules[index].slots = schedule
+        }
+    }
+
+    func switchSchedule(to id: UUID) {
+        guard let target = savedSchedules.first(where: { $0.id == id }) else { return }
+        // Set the active one first so the edit below is saved into the right schedule.
+        activeScheduleID = id
+        let validIDs = Set(classes.map { $0.id })
+        schedule = target.slots.filter { validIDs.contains($0.classID) }
+    }
+
+    func createSchedule(named name: String, copyCurrent: Bool) {
+        let cleaned = name.trimmingCharacters(in: .whitespacesAndNewlines)
+
+        var slots: [ScheduleSlot] = []
+        if copyCurrent {
+            for slot in schedule {
+                slots.append(
+                    ScheduleSlot(
+                        classID: slot.classID,
+                        weekday: slot.weekday,
+                        startMinutes: slot.startMinutes,
+                        endMinutes: slot.endMinutes
+                    )
+                )
+            }
+        }
+
+        let newSchedule = SavedSchedule(name: cleaned.isEmpty ? "New schedule" : cleaned, slots: slots)
+        savedSchedules.append(newSchedule)
+        activeScheduleID = newSchedule.id
+        schedule = newSchedule.slots
+    }
+
+    func renameSchedule(_ id: UUID, to name: String) {
+        let cleaned = name.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !cleaned.isEmpty,
+              let index = savedSchedules.firstIndex(where: { $0.id == id }) else { return }
+        savedSchedules[index].name = cleaned
+    }
+
+    func deleteSchedule(_ id: UUID) {
+        guard savedSchedules.count > 1 else { return }
+        savedSchedules.removeAll { $0.id == id }
+        if activeScheduleID == id, let first = savedSchedules.first {
+            switchSchedule(to: first.id)
+        }
+    }
+
+    /// Adds times read from a picture. It replaces whatever was on the chosen days.
+    func importSlots(_ items: [(classID: UUID, start: Int, end: Int)], onWeekdays days: Set<Int>) {
+        var updated = schedule.filter { !days.contains($0.weekday) }
+        for day in days.sorted() {
+            for item in items {
+                updated.append(
+                    ScheduleSlot(
+                        classID: item.classID,
+                        weekday: day,
+                        startMinutes: item.start,
+                        endMinutes: max(item.end, item.start + 1)
+                    )
+                )
+            }
+        }
+        schedule = updated
+    }
 
     func slots(on date: Date) -> [ScheduleSlot] {
         let weekday = Calendar.current.component(.weekday, from: date)
