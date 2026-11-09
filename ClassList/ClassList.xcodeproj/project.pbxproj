@@ -77,6 +77,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		26C0A0023091A7E1009304CE /* ARCHITECTURE.md */ = {isa = PBXFileReference; lastKnownFileType = text.markdown; path = ../ARCHITECTURE.md; sourceTree = "<group>"; };
 		26C0A0013091A7E1009304CE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text.markdown; path = ../README.md; sourceTree = "<group>"; };
 		256B695D30747CE20010A3D0 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		256B696D30747D630010A3D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -201,6 +202,7 @@
 		25BAA7D6306B51FA005B21B0 = {
 			isa = PBXGroup;
 			children = (
+				26C0A0023091A7E1009304CE /* ARCHITECTURE.md */,
 				26C0A0013091A7E1009304CE /* README.md */,
 				256B695E30747CE20010A3D0 /* ClassList_AllFiles */,
 				256B697930747E4C0010A3D0 /* ClassListWidgets */,

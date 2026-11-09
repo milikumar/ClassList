@@ -2,6 +2,8 @@
 
 ClassList is a native SwiftUI planner for keeping track of classes, daily homework, study tasks, and time spent studying. It includes an iPhone app, a Home Screen widget and Live Activity, and an Apple Watch companion for logging work.
 
+New to iOS architecture? See the beginner-friendly [architecture guide](ARCHITECTURE.md).
+
 ## Architecture
 
 The iPhone app uses a small, view-driven SwiftUI structure. `ClassListApp` creates the shared `DataStore` and routes between setup, home, schedule, timer, and settings screens. The store keeps class, schedule, daily list, and study-session data on device using `UserDefaults`.
