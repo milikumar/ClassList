@@ -7,24 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		256B695F30747CE20010A3D0 /* TimerFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256B695730747CE20010A3D0 /* TimerFeature.swift */; };
-		256B696030747CE20010A3D0 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256B695630747CE20010A3D0 /* Theme.swift */; };
-		256B696130747CE20010A3D0 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256B695030747CE20010A3D0 /* Models.swift */; };
-		256B696330747CE20010A3D0 /* ClassListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256B694E30747CE20010A3D0 /* ClassListApp.swift */; };
-		256B696430747CE20010A3D0 /* SetupAndHomeViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256B695430747CE20010A3D0 /* SetupAndHomeViews.swift */; };
-		256B696630747CE20010A3D0 /* PastListsAndSettingsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256B695230747CE20010A3D0 /* PastListsAndSettingsViews.swift */; };
-		256B696730747CE20010A3D0 /* DayListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256B694F30747CE20010A3D0 /* DayListView.swift */; };
-		256B696830747CE20010A3D0 /* TrackFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256B695830747CE20010A3D0 /* TrackFlowView.swift */; };
-		256B696930747CE20010A3D0 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256B695130747CE20010A3D0 /* Notifications.swift */; };
-		256B696A30747CE20010A3D0 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256B695330747CE20010A3D0 /* ScheduleView.swift */; };
-		256B696B30747CE20010A3D0 /* StudyTimerAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256B695530747CE20010A3D0 /* StudyTimerAttributes.swift */; };
 		256B696C30747CE20010A3D0 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 256B695D30747CE20010A3D0 /* README.txt */; };
 		256B696E30747D630010A3D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 256B696D30747D630010A3D0 /* Assets.xcassets */; };
 		256B697630747E4C0010A3D0 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256B697530747E4C0010A3D0 /* WidgetKit.framework */; };
 		256B697830747E4C0010A3D0 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256B697730747E4C0010A3D0 /* SwiftUI.framework */; };
 		256B698930747E4D0010A3D0 /* ClassListWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 256B697330747E4C0010A3D0 /* ClassListWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		256B6990307482140010A3D0 /* StudyTimerAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256B695530747CE20010A3D0 /* StudyTimerAttributes.swift */; };
-		25B34F8230904B1100BB171A /* ScheduleImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B34F8130904B1100BB171A /* ScheduleImportView.swift */; };
+		257E6A1C3091A4BC009304CE /* ClassListWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 257E6A123091A4BB009304CE /* ClassListWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		257E6A2A3091A5A6009304CE /* WatchPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B34F9B3091A28A00BB171A /* WatchPayload.swift */; };
+		25B34F9E3091A28A00BB171A /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B34F943091A28A00BB171A /* ScheduleView.swift */; };
+		25B34F9F3091A28A00BB171A /* PastListsAndSettingsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B34F913091A28A00BB171A /* PastListsAndSettingsViews.swift */; };
+		25B34FA03091A28A00BB171A /* StudyTimerAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B34F973091A28A00BB171A /* StudyTimerAttributes.swift */; };
+		25B34FA13091A28A00BB171A /* ClassListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B34F8D3091A28A00BB171A /* ClassListApp.swift */; };
+		25B34FA23091A28A00BB171A /* SharedSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B34F963091A28A00BB171A /* SharedSnapshot.swift */; };
+		25B34FA33091A28A00BB171A /* DayListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B34F8E3091A28A00BB171A /* DayListView.swift */; };
+		25B34FA43091A28A00BB171A /* WidgetSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B34F9C3091A28A00BB171A /* WidgetSync.swift */; };
+		25B34FA53091A28A00BB171A /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B34F8F3091A28A00BB171A /* Models.swift */; };
+		25B34FA63091A28A00BB171A /* WatchPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B34F9B3091A28A00BB171A /* WatchPayload.swift */; };
+		25B34FA73091A28A00BB171A /* ScheduleImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B34F933091A28A00BB171A /* ScheduleImportView.swift */; };
+		25B34FA83091A28A00BB171A /* TimerFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B34F993091A28A00BB171A /* TimerFeature.swift */; };
+		25B34FA93091A28A00BB171A /* PhoneConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B34F923091A28A00BB171A /* PhoneConnectivity.swift */; };
+		25B34FAA3091A28A00BB171A /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B34F903091A28A00BB171A /* Notifications.swift */; };
+		25B34FAB3091A28A00BB171A /* SetupAndHomeViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B34F953091A28A00BB171A /* SetupAndHomeViews.swift */; };
+		25B34FAC3091A28A00BB171A /* TrackFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B34F9A3091A28A00BB171A /* TrackFlowView.swift */; };
+		25B34FAD3091A28A00BB171A /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B34F983091A28A00BB171A /* Theme.swift */; };
+		25B34FAE3091A2B700BB171A /* StudyTimerAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B34F973091A28A00BB171A /* StudyTimerAttributes.swift */; };
+		25B34FAF3091A2C000BB171A /* SharedSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B34F963091A28A00BB171A /* SharedSnapshot.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +41,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 256B697230747E4C0010A3D0;
 			remoteInfo = ClassListWidgetsExtension;
+		};
+		257E6A1A3091A4BC009304CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 25BAA7D7306B51FA005B21B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 257E6A113091A4BB009304CE;
+			remoteInfo = "ClassListWatch Watch App";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -49,26 +63,42 @@
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		257E6A1D3091A4BC009304CE /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				257E6A1C3091A4BC009304CE /* ClassListWatch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		256B694E30747CE20010A3D0 /* ClassListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassListApp.swift; sourceTree = "<group>"; };
-		256B694F30747CE20010A3D0 /* DayListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayListView.swift; sourceTree = "<group>"; };
-		256B695030747CE20010A3D0 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-		256B695130747CE20010A3D0 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
-		256B695230747CE20010A3D0 /* PastListsAndSettingsViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastListsAndSettingsViews.swift; sourceTree = "<group>"; };
-		256B695330747CE20010A3D0 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
-		256B695430747CE20010A3D0 /* SetupAndHomeViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAndHomeViews.swift; sourceTree = "<group>"; };
-		256B695530747CE20010A3D0 /* StudyTimerAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyTimerAttributes.swift; sourceTree = "<group>"; };
-		256B695630747CE20010A3D0 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
-		256B695730747CE20010A3D0 /* TimerFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerFeature.swift; sourceTree = "<group>"; };
-		256B695830747CE20010A3D0 /* TrackFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackFlowView.swift; sourceTree = "<group>"; };
 		256B695D30747CE20010A3D0 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		256B696D30747D630010A3D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		256B697330747E4C0010A3D0 /* ClassListWidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ClassListWidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		256B697530747E4C0010A3D0 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		256B697730747E4C0010A3D0 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		25B34F8130904B1100BB171A /* ScheduleImportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleImportView.swift; sourceTree = "<group>"; };
+		257E6A123091A4BB009304CE /* ClassListWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ClassListWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		25B34F8D3091A28A00BB171A /* ClassListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassListApp.swift; sourceTree = "<group>"; };
+		25B34F8E3091A28A00BB171A /* DayListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayListView.swift; sourceTree = "<group>"; };
+		25B34F8F3091A28A00BB171A /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		25B34F903091A28A00BB171A /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		25B34F913091A28A00BB171A /* PastListsAndSettingsViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastListsAndSettingsViews.swift; sourceTree = "<group>"; };
+		25B34F923091A28A00BB171A /* PhoneConnectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneConnectivity.swift; sourceTree = "<group>"; };
+		25B34F933091A28A00BB171A /* ScheduleImportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleImportView.swift; sourceTree = "<group>"; };
+		25B34F943091A28A00BB171A /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		25B34F953091A28A00BB171A /* SetupAndHomeViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAndHomeViews.swift; sourceTree = "<group>"; };
+		25B34F963091A28A00BB171A /* SharedSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedSnapshot.swift; sourceTree = "<group>"; };
+		25B34F973091A28A00BB171A /* StudyTimerAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyTimerAttributes.swift; sourceTree = "<group>"; };
+		25B34F983091A28A00BB171A /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		25B34F993091A28A00BB171A /* TimerFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerFeature.swift; sourceTree = "<group>"; };
+		25B34F9A3091A28A00BB171A /* TrackFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackFlowView.swift; sourceTree = "<group>"; };
+		25B34F9B3091A28A00BB171A /* WatchPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchPayload.swift; sourceTree = "<group>"; };
+		25B34F9C3091A28A00BB171A /* WidgetSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSync.swift; sourceTree = "<group>"; };
 		25BAA7DF306B51FA005B21B0 /* ClassList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -77,17 +107,8 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
-				WidgetSync.swift,
 			);
 			target = 256B697230747E4C0010A3D0 /* ClassListWidgetsExtension */;
-		};
-		256B699F3083347C0010A3D0 /* Exceptions for "ClassListWidgets" folder in "ClassList" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				SharedSnapshot.swift,
-				WidgetSync.swift,
-			);
-			target = 25BAA7DE306B51FA005B21B0 /* ClassList */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -95,10 +116,14 @@
 		256B697930747E4C0010A3D0 /* ClassListWidgets */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				256B699F3083347C0010A3D0 /* Exceptions for "ClassListWidgets" folder in "ClassList" target */,
 				256B698A30747E4D0010A3D0 /* Exceptions for "ClassListWidgets" folder in "ClassListWidgetsExtension" target */,
 			);
 			path = ClassListWidgets;
+			sourceTree = "<group>";
+		};
+		257E6A133091A4BB009304CE /* ClassListWatch Watch App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "ClassListWatch Watch App";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -113,6 +138,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		257E6A0F3091A4BB009304CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		25BAA7DC306B51FA005B21B0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -123,29 +155,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		256B695930747CE20010A3D0 /* 1_App_files */ = {
-			isa = PBXGroup;
-			children = (
-				256B694E30747CE20010A3D0 /* ClassListApp.swift */,
-				256B694F30747CE20010A3D0 /* DayListView.swift */,
-				256B695030747CE20010A3D0 /* Models.swift */,
-				256B695130747CE20010A3D0 /* Notifications.swift */,
-				256B695230747CE20010A3D0 /* PastListsAndSettingsViews.swift */,
-				256B695330747CE20010A3D0 /* ScheduleView.swift */,
-				256B695430747CE20010A3D0 /* SetupAndHomeViews.swift */,
-				25B34F8130904B1100BB171A /* ScheduleImportView.swift */,
-				256B695530747CE20010A3D0 /* StudyTimerAttributes.swift */,
-				256B695630747CE20010A3D0 /* Theme.swift */,
-				256B695730747CE20010A3D0 /* TimerFeature.swift */,
-				256B695830747CE20010A3D0 /* TrackFlowView.swift */,
-			);
-			path = 1_App_files;
-			sourceTree = "<group>";
-		};
 		256B695E30747CE20010A3D0 /* ClassList_AllFiles */ = {
 			isa = PBXGroup;
 			children = (
-				256B695930747CE20010A3D0 /* 1_App_files */,
+				25B34F9D3091A28A00BB171A /* 1_App_files */,
 				256B695D30747CE20010A3D0 /* README.txt */,
 				256B696D30747D630010A3D0 /* Assets.xcassets */,
 			);
@@ -161,11 +174,35 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		25B34F9D3091A28A00BB171A /* 1_App_files */ = {
+			isa = PBXGroup;
+			children = (
+				25B34F8D3091A28A00BB171A /* ClassListApp.swift */,
+				25B34F8E3091A28A00BB171A /* DayListView.swift */,
+				25B34F8F3091A28A00BB171A /* Models.swift */,
+				25B34F903091A28A00BB171A /* Notifications.swift */,
+				25B34F913091A28A00BB171A /* PastListsAndSettingsViews.swift */,
+				25B34F923091A28A00BB171A /* PhoneConnectivity.swift */,
+				25B34F933091A28A00BB171A /* ScheduleImportView.swift */,
+				25B34F943091A28A00BB171A /* ScheduleView.swift */,
+				25B34F953091A28A00BB171A /* SetupAndHomeViews.swift */,
+				25B34F963091A28A00BB171A /* SharedSnapshot.swift */,
+				25B34F973091A28A00BB171A /* StudyTimerAttributes.swift */,
+				25B34F983091A28A00BB171A /* Theme.swift */,
+				25B34F993091A28A00BB171A /* TimerFeature.swift */,
+				25B34F9A3091A28A00BB171A /* TrackFlowView.swift */,
+				25B34F9B3091A28A00BB171A /* WatchPayload.swift */,
+				25B34F9C3091A28A00BB171A /* WidgetSync.swift */,
+			);
+			path = 1_App_files;
+			sourceTree = "<group>";
+		};
 		25BAA7D6306B51FA005B21B0 = {
 			isa = PBXGroup;
 			children = (
 				256B695E30747CE20010A3D0 /* ClassList_AllFiles */,
 				256B697930747E4C0010A3D0 /* ClassListWidgets */,
+				257E6A133091A4BB009304CE /* ClassListWatch Watch App */,
 				256B697430747E4C0010A3D0 /* Frameworks */,
 				25BAA7E0306B51FA005B21B0 /* Products */,
 			);
@@ -176,6 +213,7 @@
 			children = (
 				25BAA7DF306B51FA005B21B0 /* ClassList.app */,
 				256B697330747E4C0010A3D0 /* ClassListWidgetsExtension.appex */,
+				257E6A123091A4BB009304CE /* ClassListWatch Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -205,6 +243,28 @@
 			productReference = 256B697330747E4C0010A3D0 /* ClassListWidgetsExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		257E6A113091A4BB009304CE /* ClassListWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 257E6A203091A4BC009304CE /* Build configuration list for PBXNativeTarget "ClassListWatch Watch App" */;
+			buildPhases = (
+				257E6A0E3091A4BB009304CE /* Sources */,
+				257E6A0F3091A4BB009304CE /* Frameworks */,
+				257E6A103091A4BB009304CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				257E6A133091A4BB009304CE /* ClassListWatch Watch App */,
+			);
+			name = "ClassListWatch Watch App";
+			packageProductDependencies = (
+			);
+			productName = "ClassListWatch Watch App";
+			productReference = 257E6A123091A4BB009304CE /* ClassListWatch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
 		25BAA7DE306B51FA005B21B0 /* ClassList */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 25BAA7EA306B51FC005B21B0 /* Build configuration list for PBXNativeTarget "ClassList" */;
@@ -213,11 +273,13 @@
 				25BAA7DC306B51FA005B21B0 /* Frameworks */,
 				25BAA7DD306B51FA005B21B0 /* Resources */,
 				256B698E30747E4D0010A3D0 /* Embed Foundation Extensions */,
+				257E6A1D3091A4BC009304CE /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				256B698830747E4D0010A3D0 /* PBXTargetDependency */,
+				257E6A1B3091A4BC009304CE /* PBXTargetDependency */,
 			);
 			name = ClassList;
 			packageProductDependencies = (
@@ -233,11 +295,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 2660;
+				LastSwiftUpdateCheck = 2710;
 				LastUpgradeCheck = 2710;
 				TargetAttributes = {
 					256B697230747E4C0010A3D0 = {
 						CreatedOnToolsVersion = 26.6;
+					};
+					257E6A113091A4BB009304CE = {
+						CreatedOnToolsVersion = 27.1;
 					};
 					25BAA7DE306B51FA005B21B0 = {
 						CreatedOnToolsVersion = 26.6;
@@ -260,12 +325,20 @@
 			targets = (
 				25BAA7DE306B51FA005B21B0 /* ClassList */,
 				256B697230747E4C0010A3D0 /* ClassListWidgetsExtension */,
+				257E6A113091A4BB009304CE /* ClassListWatch Watch App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		256B697130747E4C0010A3D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		257E6A103091A4BB009304CE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -288,7 +361,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				256B6990307482140010A3D0 /* StudyTimerAttributes.swift in Sources */,
+				25B34FAE3091A2B700BB171A /* StudyTimerAttributes.swift in Sources */,
+				25B34FAF3091A2C000BB171A /* SharedSnapshot.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		257E6A0E3091A4BB009304CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				257E6A2A3091A5A6009304CE /* WatchPayload.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,18 +378,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				256B695F30747CE20010A3D0 /* TimerFeature.swift in Sources */,
-				256B696030747CE20010A3D0 /* Theme.swift in Sources */,
-				256B696130747CE20010A3D0 /* Models.swift in Sources */,
-				256B696330747CE20010A3D0 /* ClassListApp.swift in Sources */,
-				256B696430747CE20010A3D0 /* SetupAndHomeViews.swift in Sources */,
-				256B696630747CE20010A3D0 /* PastListsAndSettingsViews.swift in Sources */,
-				256B696730747CE20010A3D0 /* DayListView.swift in Sources */,
-				256B696830747CE20010A3D0 /* TrackFlowView.swift in Sources */,
-				256B696930747CE20010A3D0 /* Notifications.swift in Sources */,
-				256B696A30747CE20010A3D0 /* ScheduleView.swift in Sources */,
-				25B34F8230904B1100BB171A /* ScheduleImportView.swift in Sources */,
-				256B696B30747CE20010A3D0 /* StudyTimerAttributes.swift in Sources */,
+				25B34F9E3091A28A00BB171A /* ScheduleView.swift in Sources */,
+				25B34F9F3091A28A00BB171A /* PastListsAndSettingsViews.swift in Sources */,
+				25B34FA03091A28A00BB171A /* StudyTimerAttributes.swift in Sources */,
+				25B34FA13091A28A00BB171A /* ClassListApp.swift in Sources */,
+				25B34FA23091A28A00BB171A /* SharedSnapshot.swift in Sources */,
+				25B34FA33091A28A00BB171A /* DayListView.swift in Sources */,
+				25B34FA43091A28A00BB171A /* WidgetSync.swift in Sources */,
+				25B34FA53091A28A00BB171A /* Models.swift in Sources */,
+				25B34FA63091A28A00BB171A /* WatchPayload.swift in Sources */,
+				25B34FA73091A28A00BB171A /* ScheduleImportView.swift in Sources */,
+				25B34FA83091A28A00BB171A /* TimerFeature.swift in Sources */,
+				25B34FA93091A28A00BB171A /* PhoneConnectivity.swift in Sources */,
+				25B34FAA3091A28A00BB171A /* Notifications.swift in Sources */,
+				25B34FAB3091A28A00BB171A /* SetupAndHomeViews.swift in Sources */,
+				25B34FAC3091A28A00BB171A /* TrackFlowView.swift in Sources */,
+				25B34FAD3091A28A00BB171A /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +404,11 @@
 			isa = PBXTargetDependency;
 			target = 256B697230747E4C0010A3D0 /* ClassListWidgetsExtension */;
 			targetProxy = 256B698730747E4D0010A3D0 /* PBXContainerItemProxy */;
+		};
+		257E6A1B3091A4BC009304CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 257E6A113091A4BB009304CE /* ClassListWatch Watch App */;
+			targetProxy = 257E6A1A3091A4BC009304CE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -379,6 +470,72 @@
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		257E6A1E3091A4BC009304CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L2CRQ2B84C;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ClassListWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.ClassList26;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ClassList26.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 26.6;
+			};
+			name = Debug;
+		};
+		257E6A1F3091A4BC009304CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L2CRQ2B84C;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ClassListWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.ClassList26;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ClassList26.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 26.6;
 			};
 			name = Release;
 		};
@@ -587,6 +744,15 @@
 			buildConfigurations = (
 				256B698C30747E4D0010A3D0 /* Debug */,
 				256B698D30747E4D0010A3D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		257E6A203091A4BC009304CE /* Build configuration list for PBXNativeTarget "ClassListWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				257E6A1E3091A4BC009304CE /* Debug */,
+				257E6A1F3091A4BC009304CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

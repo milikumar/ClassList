@@ -25,6 +25,7 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
         UNUserNotificationCenter.current().delegate = NotificationRouter.shared
+        PhoneConnectivity.shared.activate()
         return true
     }
 }

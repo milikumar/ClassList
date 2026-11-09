@@ -68,6 +68,7 @@ struct RootView: View {
         .onAppear {
             NotificationScheduler.refresh(using: store)
             WidgetSync.refresh(store: store, timerStore: timerStore)
+            PhoneBridge.shared.attach(store)
             handlePendingAction()
         }
         .onChange(of: scenePhase) { _, phase in
@@ -75,6 +76,7 @@ struct RootView: View {
                 NotificationScheduler.refresh(using: store)
                 LiveActivityManager.sync(with: timerStore.session, canStart: false)
                 WidgetSync.refresh(store: store, timerStore: timerStore)
+                PhoneBridge.shared.attach(store)
                 handlePendingAction()
             }
         }
@@ -89,6 +91,7 @@ struct RootView: View {
         }
         .onChange(of: store.classes) { _, _ in
             WidgetSync.refresh(store: store, timerStore: timerStore)
+            PhoneBridge.shared.pushClasses()
         }
         .onChange(of: timerStore.session) { _, _ in
             WidgetSync.refresh(store: store, timerStore: timerStore)
