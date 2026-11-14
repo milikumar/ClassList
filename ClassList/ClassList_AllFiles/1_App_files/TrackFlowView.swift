@@ -91,6 +91,7 @@ enum TrackStage: Equatable {
 
 struct TrackFlowView: View {
     @EnvironmentObject private var store: DataStore
+    @EnvironmentObject private var canvas: CanvasStore
     @Binding var path: [Route]
 
     let date: Date
@@ -126,6 +127,9 @@ struct TrackFlowView: View {
         .background { AppBackground() }
         .navigationBarBackButtonHidden(true)
         .navigationBarTitleDisplayMode(.inline)
+        .task {
+            await canvas.refresh()
+        }
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
                 Button(action: goBack) {
@@ -229,6 +233,11 @@ struct TrackFlowView: View {
                     answerButton(index, .homework, "Yes, I have homework", "doc.text")
                     answerButton(index, .noWork, "No homework", "checkmark.circle")
                     answerButton(index, .study, "I have to study for a quiz/test", "graduationcap")
+                }
+
+                // Reminder of what's coming up in Canvas for this class
+                if let classID = current?.id {
+                    CanvasReminderCard(classID: classID)
                 }
             }
             .padding(20)

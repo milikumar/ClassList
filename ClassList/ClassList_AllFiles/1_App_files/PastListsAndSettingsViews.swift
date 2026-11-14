@@ -103,6 +103,20 @@ struct SettingsView: View {
                 }
                 .buttonStyle(.plain)
 
+                NavigationLink(value: Route.canvas) {
+                    HStack {
+                        Label("Canvas", systemImage: "checklist")
+                            .font(.headline)
+                        Spacer()
+                        Image(systemName: "chevron.right")
+                            .font(.footnote.weight(.bold))
+                            .foregroundStyle(Theme.textSecondary)
+                    }
+                    .foregroundStyle(Color.white)
+                    .card()
+                }
+                .buttonStyle(.plain)
+
                 Stepper(
                     value: Binding(
                         get: { store.classes.count },

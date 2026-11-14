@@ -7,12 +7,14 @@ struct ClassListApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
     @StateObject private var store = DataStore()
     @StateObject private var timerStore = TimerStore()
+    @StateObject private var canvasStore = CanvasStore()
 
     var body: some Scene {
         WindowGroup {
             RootView()
                 .environmentObject(store)
                 .environmentObject(timerStore)
+                .environmentObject(canvasStore)
                 .preferredColorScheme(.dark)
                 .tint(Theme.accent)
                 .fontDesign(.rounded)
@@ -30,11 +32,13 @@ nonisolated enum Route: Hashable {
     case settings
     case schedule
     case timer(UUID)
+    case canvas
 }
 
 struct RootView: View {
     @EnvironmentObject private var store: DataStore
     @EnvironmentObject private var timerStore: TimerStore
+    @EnvironmentObject private var canvasStore: CanvasStore
     @ObservedObject private var router = AppRouter.shared
     @Environment(\.scenePhase) private var scenePhase
     @State private var path: [Route] = []
@@ -60,6 +64,8 @@ struct RootView: View {
                                 ScheduleView()
                             case .timer(let classID):
                                 TimerView(classID: classID)
+                            case .canvas:
+                                CanvasSettingsView()
                             }
                         }
                 }
@@ -69,12 +75,14 @@ struct RootView: View {
             NotificationScheduler.refresh(using: store)
             WidgetSync.refresh(store: store, timerStore: timerStore)
             PhoneBridge.shared.attach(store)
+            Task { await canvasStore.refresh() }
             handlePendingAction()
         }
         .onChange(of: scenePhase) { _, phase in
             if phase == .active {
                 NotificationScheduler.refresh(using: store)
                 LiveActivityManager.sync(with: timerStore.session, canStart: false)
+                Task { await canvasStore.refresh() }
                 WidgetSync.refresh(store: store, timerStore: timerStore)
                 PhoneBridge.shared.attach(store)
                 handlePendingAction()

@@ -14,6 +14,7 @@
 		256B698930747E4D0010A3D0 /* ClassListWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 256B697330747E4C0010A3D0 /* ClassListWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		257E6A1C3091A4BC009304CE /* ClassListWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 257E6A123091A4BB009304CE /* ClassListWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		257E6A2A3091A5A6009304CE /* WatchPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B34F9B3091A28A00BB171A /* WatchPayload.swift */; };
+		259174F830A811EC003F9CD2 /* CanvasFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259174F730A811EB003F9CD2 /* CanvasFeed.swift */; };
 		25B34F9E3091A28A00BB171A /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B34F943091A28A00BB171A /* ScheduleView.swift */; };
 		25B34F9F3091A28A00BB171A /* PastListsAndSettingsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B34F913091A28A00BB171A /* PastListsAndSettingsViews.swift */; };
 		25B34FA03091A28A00BB171A /* StudyTimerAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B34F973091A28A00BB171A /* StudyTimerAttributes.swift */; };
@@ -77,14 +78,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		26C0A0023091A7E1009304CE /* ARCHITECTURE.md */ = {isa = PBXFileReference; lastKnownFileType = text.markdown; path = ../ARCHITECTURE.md; sourceTree = "<group>"; };
-		26C0A0013091A7E1009304CE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text.markdown; path = ../README.md; sourceTree = "<group>"; };
 		256B695D30747CE20010A3D0 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		256B696D30747D630010A3D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		256B697330747E4C0010A3D0 /* ClassListWidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ClassListWidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		256B697530747E4C0010A3D0 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		256B697730747E4C0010A3D0 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		257E6A123091A4BB009304CE /* ClassListWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ClassListWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		259174F730A811EB003F9CD2 /* CanvasFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasFeed.swift; sourceTree = "<group>"; };
 		25B34F8D3091A28A00BB171A /* ClassListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassListApp.swift; sourceTree = "<group>"; };
 		25B34F8E3091A28A00BB171A /* DayListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayListView.swift; sourceTree = "<group>"; };
 		25B34F8F3091A28A00BB171A /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
@@ -102,6 +102,8 @@
 		25B34F9B3091A28A00BB171A /* WatchPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchPayload.swift; sourceTree = "<group>"; };
 		25B34F9C3091A28A00BB171A /* WidgetSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSync.swift; sourceTree = "<group>"; };
 		25BAA7DF306B51FA005B21B0 /* ClassList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		26C0A0013091A7E1009304CE /* ../README.md */ = {isa = PBXFileReference; lastKnownFileType = text.markdown; path = ../README.md; sourceTree = "<group>"; };
+		26C0A0023091A7E1009304CE /* ../ARCHITECTURE.md */ = {isa = PBXFileReference; lastKnownFileType = text.markdown; path = ../ARCHITECTURE.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -179,6 +181,7 @@
 		25B34F9D3091A28A00BB171A /* 1_App_files */ = {
 			isa = PBXGroup;
 			children = (
+				259174F730A811EB003F9CD2 /* CanvasFeed.swift */,
 				25B34F8D3091A28A00BB171A /* ClassListApp.swift */,
 				25B34F8E3091A28A00BB171A /* DayListView.swift */,
 				25B34F8F3091A28A00BB171A /* Models.swift */,
@@ -202,8 +205,8 @@
 		25BAA7D6306B51FA005B21B0 = {
 			isa = PBXGroup;
 			children = (
-				26C0A0023091A7E1009304CE /* ARCHITECTURE.md */,
-				26C0A0013091A7E1009304CE /* README.md */,
+				26C0A0023091A7E1009304CE /* ../ARCHITECTURE.md */,
+				26C0A0013091A7E1009304CE /* ../README.md */,
 				256B695E30747CE20010A3D0 /* ClassList_AllFiles */,
 				256B697930747E4C0010A3D0 /* ClassListWidgets */,
 				257E6A133091A4BB009304CE /* ClassListWatch Watch App */,
@@ -391,6 +394,7 @@
 				25B34FA43091A28A00BB171A /* WidgetSync.swift in Sources */,
 				25B34FA53091A28A00BB171A /* Models.swift in Sources */,
 				25B34FA63091A28A00BB171A /* WatchPayload.swift in Sources */,
+				259174F830A811EC003F9CD2 /* CanvasFeed.swift in Sources */,
 				25B34FA73091A28A00BB171A /* ScheduleImportView.swift in Sources */,
 				25B34FA83091A28A00BB171A /* TimerFeature.swift in Sources */,
 				25B34FA93091A28A00BB171A /* PhoneConnectivity.swift in Sources */,
